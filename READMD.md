@@ -22,3 +22,18 @@
     
 * Perform multiple commits in the branch
     - Modified the READMD.md file
+        ``` 
+            git commit -m "test: T12-T1299-02 modified the README.md
+        ```
+    - Added the new text file
+        ```
+            git commit -m "test: TP2-T1299-04 - add new text file
+        ```
+    - Modified the text file
+        ```
+            git commit -m "test: TP2-T1299-05 - modify the text document
+        ```
+    - MOdified the README.md file
+        ```
+            git commit -m "test: TP2-T1299-05 - modify the README.md
+        ```
