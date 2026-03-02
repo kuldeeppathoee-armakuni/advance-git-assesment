@@ -64,4 +64,11 @@
     git merge develop            # Bring those changes into current branch
     git push origin test/tp12-t1299-new
     ```
+* Mark a specific commit as a version (e.g., v1.0.1)
+    ```
+    git tag -a v1.0.1 -m "Release version 1.0.1"
+    git push origin v1.0.1
+    ```
+
+
 
