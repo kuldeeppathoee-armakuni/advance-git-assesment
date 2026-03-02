@@ -46,3 +46,22 @@
     <img src="images/Review.png" alt="App Screenshot" width="500">
     - Merge and delete 
     <img src="images/PR-merge.png" alt="App Screenshot" width="500">
+* Create another branch from develop given your previous PR is still in review state.
+    ```
+    git checkout -b test/tp12-t1299-new
+
+    ```
+* Now commit something in your current branch and push it
+    ```
+    git commit -m "test: TP2-T1299-07 - modify README.md
+
+    ```
+* Sync with develop (After PR Merge)
+    ```
+    git checkout develop
+    git pull origin develop      # Get the newly merged changes
+    git checkout test/tp12-t1299-new
+    git merge develop            # Bring those changes into current branch
+    git push origin test/tp12-t1299-new
+    ```
+
