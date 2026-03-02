@@ -1,4 +1,5 @@
-# Advance Git Asessment
+# Advance Git Assessment
+## Test Cases
 * Create a branch develop from the main
     ```
     git checkout -b develope 
@@ -37,4 +38,11 @@
         ```
             git commit -m "test: TP2-T1299-05 - modify the README.md
         ```
-# Advance git assessment
+* Create PR to develop.
+
+    - Create PR
+    <img src="images/Create-PR.png" alt="App Screenshot" width="500">
+    - Review differences
+    <img src="images/Review.png" alt="App Screenshot" width="500">
+    - Merge and delete 
+    <img src="images/PR-merge.png" alt="App Screenshot" width="500">
