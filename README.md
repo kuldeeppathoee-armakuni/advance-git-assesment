@@ -1,4 +1,3 @@
-<<<<<<< test/TP2-T1299
 # Advance Git Asessment
 * Create a branch develop from the main
     ```
@@ -38,6 +37,4 @@
         ```
             git commit -m "test: TP2-T1299-05 - modify the README.md
         ```
-=======
 # Advance git assessment
->>>>>>> develop
