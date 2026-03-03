@@ -94,5 +94,11 @@
     git commit -m "feat: modify README.md"
     git push origin test/tp12-t1299-new
     ```
+* 1. Add 3 commits to the test/tp12-t1299-new1 Branch
+    ```
+    echo "data 1" > file1.txt && git add file1.txt && git commit -m "test: tp12-t1299-12 - Commit 1 of 3" # First commit
 
+    echo "data 1" > file2.txt && git add file1.txt && git commit -m "test: tp12-t1299-13 - Commit 2 of 3" # First commit
 
+    echo "data 1" > file2.txt && git add file1.txt && git commit -m "test: tp12-t1299-14 - Commit 3 of 3" # First commit
+    ```
