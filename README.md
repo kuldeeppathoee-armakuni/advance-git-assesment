@@ -69,6 +69,41 @@
     git tag -a v1.0.1 -m "Release version 1.0.1"
     git push origin v1.0.1
     ```
+* Create and Prepare the Branches
+    ``` 
+    git checkout -b test/tp12-t1299-new
+    git checkout -b test/tp12t-1299-new1
+    git checkout test/tp12-t1299-new #make the  changes in README.md 
+    ```
+* Commit and Push to the test/tp12-t1299-new Branch
+    ```
+    git add README.md
+    git commit -m "test: tp12-t1299 - modify README.md"
+    git push origin test/tp12-t1299-new
+    ```
 
+* Create and Prepare the Branches
+    ``` 
+    git checkout -b test/tp12-t1299-new
+    git checkout -b test/tp12t-1299-new1
+    git checkout test/tp12-t1299-new #make the  changes in README.md 
+    ```
+* Commit and Push to the test/tp12-t1299-new Branch
+    ```
+    git add README.md
+    git commit -m "feat: modify README.md"
+    git push origin test/tp12-t1299-new
+    ```
+* Add 3 commits to the test/tp12-t1299-new1 Branch
+    ```
+    echo "data 1" > file1.txt && git add file1.txt && git commit -m "test: tp12-t1299-12 - Commit 1 of 3" # First commit
 
+    echo "data 2" > file2.txt && git add file2.txt && git commit -m "test: tp12-t1299-13 - Commit 2 of 3" # Second commit
+
+    echo "data 3" > file3.txt && git add file3.txt && git commit -m "test: tp12-t1299-14 - Commit 3 of 3" # Third commit
+    ```
+* Delete the last commit (file3) but keep the others
+    ```
+    git reset --hard HEAD~
+    ```
 
