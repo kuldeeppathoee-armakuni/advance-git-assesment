@@ -98,7 +98,7 @@
     ```
     echo "data 1" > file1.txt && git add file1.txt && git commit -m "test: tp12-t1299-12 - Commit 1 of 3" # First commit
 
-    echo "data 1" > file2.txt && git add file1.txt && git commit -m "test: tp12-t1299-13 - Commit 2 of 3" # First commit
+    echo "data 2" > file2.txt && git add file2.txt && git commit -m "test: tp12-t1299-13 - Commit 2 of 3" # Second commit
 
-    echo "data 1" > file2.txt && git add file1.txt && git commit -m "test: tp12-t1299-14 - Commit 3 of 3" # First commit
+    echo "data 3" > file3.txt && git add file3.txt && git commit -m "test: tp12-t1299-14 - Commit 3 of 3" # Third commit
     ```
