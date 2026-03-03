@@ -69,6 +69,17 @@
     git tag -a v1.0.1 -m "Release version 1.0.1"
     git push origin v1.0.1
     ```
-
+* Create and Prepare the Branches
+    ``` 
+    git checkout -b test/tp12-t1299-new
+    git checkout -b test/tp12t-1299-new1
+    git checkout test/tp12-t1299-new #make the  changes in README.md 
+    ```
+* Commit and Push to the test/tp12-t1299-new Branch
+    ```
+    git add README.md
+    git commit -m "feat: modify README.md"
+    git push origin test/tp12-t1299-new
+    ```
 
 
