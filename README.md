@@ -1,1 +1,109 @@
 # Advance Git Assessment
+## Test Cases
+* Create a branch develop from the main
+    ```
+    git checkout -b develope 
+    ```
+* Add a commit message hook to the repo.
+    - Create the hook file
+    - Make it executable
+    - Write validation logic
+        ``` 
+        #!/bin/sh
+
+        commit_msg=$(cat "$1")
+
+        if ! echo "$commit_msg" | grep -E "^(feat|fix|docs|style|refactor|test|chore):" > /dev/null
+        then
+        echo "Invalid commit message format."
+        echo "Use: feat:, fix:, docs:, style:, refactor:, test:, chore:"
+        exit 1
+        fi
+        ```
+    
+* Perform multiple commits in the branch
+    - Modified the READMD.md file
+        ``` 
+            git commit -m "test: T12-T1299-02 modified the README.md
+        ```
+    - Added the new text file
+        ```
+            git commit -m "test: TP2-T1299-04 - add new text file
+        ```
+    - Modified the text file
+        ```
+            git commit -m "test: TP2-T1299-05 - modify the text document
+        ```
+    - MOdified the README.md file
+        ```
+            git commit -m "test: TP2-T1299-05 - modify the README.md
+        ```
+* Create PR to develop.
+
+    - Create PR
+    <img src="images/Create-PR.png" alt="App Screenshot" width="500">
+    - Review differences
+    <img src="images/Review.png" alt="App Screenshot" width="500">
+    - Merge and delete 
+    <img src="images/PR-merge.png" alt="App Screenshot" width="500">
+* Create another branch from develop given your previous PR is still in review state.
+    ```
+    git checkout -b test/tp12-t1299-new
+
+    ```
+* Now commit something in your current branch and push it
+    ```
+    git commit -m "test: TP2-T1299-07 - modify README.md
+
+    ```
+* Sync with develop (After PR Merge)
+    ```
+    git checkout develop
+    git pull origin develop      # Get the newly merged changes
+    git checkout test/tp12-t1299-new
+    git merge develop            # Bring those changes into current branch
+    git push origin test/tp12-t1299-new
+    ```
+* Mark a specific commit as a version (e.g., v1.0.1)
+    ```
+    git tag -a v1.0.1 -m "Release version 1.0.1"
+    git push origin v1.0.1
+    ```
+* Create and Prepare the Branches
+    ``` 
+    git checkout -b test/tp12-t1299-new
+    git checkout -b test/tp12t-1299-new1
+    git checkout test/tp12-t1299-new #make the  changes in README.md 
+    ```
+* Commit and Push to the test/tp12-t1299-new Branch
+    ```
+    git add README.md
+    git commit -m "test: tp12-t1299 - modify README.md"
+    git push origin test/tp12-t1299-new
+    ```
+
+* Create and Prepare the Branches
+    ``` 
+    git checkout -b test/tp12-t1299-new
+    git checkout -b test/tp12t-1299-new1
+    git checkout test/tp12-t1299-new #make the  changes in README.md 
+    ```
+* Commit and Push to the test/tp12-t1299-new Branch
+    ```
+    git add README.md
+    git commit -m "feat: modify README.md"
+    git push origin test/tp12-t1299-new
+    ```
+* Add 3 commits to the test/tp12-t1299-new1 Branch
+    ```
+    echo "data 1" > file1.txt && git add file1.txt && git commit -m "test: tp12-t1299-12 - Commit 1 of 3" # First commit
+
+    echo "data 2" > file2.txt && git add file2.txt && git commit -m "test: tp12-t1299-13 - Commit 2 of 3" # Second commit
+
+    echo "data 3" > file3.txt && git add file3.txt && git commit -m "test: tp12-t1299-14 - Commit 3 of 3" # Third commit
+    ```
+* Delete the last commit (file3) but keep the others
+    ```
+    git reset --hard HEAD~
+    ```
+
